@@ -1,0 +1,136 @@
+/* animate, anime,  */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #040d14;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin: 30px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #755bea, #ff72c0);
+}
+
+a:nth-child(2) {
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+a:nth-child(3) {
+    background: linear-gradient(90deg, #1E5128, #17B794);
+}
+
+span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
+
+div.category-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    flex-direction: column;
+}
+
+div.first-logos {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+}
+
+img.clg-logo {
+    display: block;
+    margin: 30px 0 20px 30px;
+    width: 50px;
+}
+
+img.canteen-logo {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 60px 12px -18px rgba(255, 255, 255, .1), 0 60px 20px -12px rgba(255, 255, 255, .1);
+    animation: anime 1s infinite ease-in-out alternate;
+    -webkit-animation: anime 1s infinite ease-in-out alternate;
+    animation-delay: .5s;
+}
+
+@keyframes anime {
+    100% {
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+        box-shadow: 0 40px 10px -18px rgba(255, 255, 255, .2), 0 40px 16px -12px rgba(255, 255, 255, .2);
+    }
+}
+
+
+
+.loader {
+    background: #111;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader div{
+    background: #fff;
+    width: 16px;
+    height: 32px;
+    margin-left: 10px;
+    animation: loader 1.2s infinite;
+}
+
+@keyframes loader {
+    50% {
+        height: 64px;
+    }
+}
+
+.loader div:nth-child(1) {
+    background: rgb(192, 21, 69);
+    animation-delay: -0.4s;
+}
+.loader div:nth-child(2) {
+    background: white;
+    animation-delay: -0.2s;
+}.loader div:nth-child(3) {
+    background: gold;
+    animation-delay: 0s;
+}
